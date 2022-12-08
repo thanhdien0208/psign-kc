@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Psign KC</title>
+    <link rel="icon" href="./image/P-sign logo blue.png" type="image/gif" sizes="16x16" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-rc.0/css/select2.min.css" integrity="sha512-aD9ophpFQ61nFZP6hXYu4Q/b/USW7rpLCQLX6Bi0WJHXNO7Js/fUENpBQf/+P4NtpzNX0jSgR5zVvPOJp+W2Kg==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+    <div class="sidebar open">
+        <div class="toggle">
+            <i class="fas fa-chevron-right"></i>
+        </div>
+        <div class="logo">
+            <a href="./index.html"><img src="./image/P-sign_logo_white.png" alt="logo" /></a>
+            <h3>Kimberly-Clark</h3>
+        </div>
+        <nav>
+            <!-- <div class="nav-title">Management</div> -->
+            <div id="navLink">
+                <a class="nav-item nav-link active" href="./index.html">
+                    <i class="fas fa-file-excel fix-size"></i>
+                    <span>File Excel</span>
+                </a>
+
+                <a class="nav-item nav-link dropdown-btn">
+                    <i class="fa-solid fa-folder-open"></i>
+                    <span>Quản lý văn bản</span>
+                    <i class="fas fa-angle-down icon-dropdown"></i>
+                </a>
+                <ul class="sub-menu">
+                    <li class="sub-item nav-link">
+                        <a href="./vb-cho-xac-nhan.html">
+                            <i class="fa-solid fa-file-circle-exclamation"></i>
+                            <span>Văn bản chờ xác nhận</span>
+                        </a>
+                    </li>
+                    <li class="sub-item nav-link">
+                        <a href="./vb-da-xac-nhan.html">
+                            <i class="fas fa-file-circle-check"></i>
+                            <span>Văn bản đã xác nhận</span>
+                        </a>
+                    </li>
+                    <li class="sub-item nav-link">
+                        <a href="./vb-da-ky.html">
+                            <i class="fas fa-file-signature"></i>
+                            <span>Văn bản đã ký</span>
+                        </a>
+                    </li>
+                    <li class="sub-item nav-link">
+                        <a href="./vb-chua-duoc-quan-ly.html">
+                            <i class="fa-solid fa-file-circle-question"></i>
+                            <span>Văn bản chưa được quản lý</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <a class="nav-item nav-link" href="./quan-ly-nhan-su.html">
+                    <i class="fa-solid fa-users"></i>
+                    <span>Quản lý nhân sự</span>
+                </a>
+
+                <hr />
+                <!-- <div class="nav-title">Supports</div> -->
+
+                <a class="nav-item nav-link" href="./thong-tin-ho-tro.html">
+                    <i class="fa-sharp fa-solid fa-circle-info"></i>
+                    <span>Thông tin hỗ trợ</span>
+                </a>
+            </div>
+        </nav>
+    </div>
+
+    <div class="main-content open">
+        <div class="header-content">
+            <div class="header-title">
+                <h3>File Excel tải lên</h3>
+                <span>34</span>
+            </div>
+            <div class="header-info header-dropdown">
+                <button onclick="dropDownInfo()" class="btn-info">
+            <img
+              class="dropbtn"
+              src="./image/avatar-icon-blue.png"
+              alt="avatar-icon"
+            />
+
+            <i class="fa-solid fa-angle-down dropbtn"></i>
+          </button>
+
+                <div id="navDropdown" class="dropdown-content">
+                    <a href="#info" class="info">
+                        <i class="fa-solid fa-user-gear icon-file"></i> Thông tin tài khoản
+                    </a>
+                    <a href="#eSign" class="esign">
+                        <i class="fa-solid fa-file-lines icon-file"></i> Xuất log
+                    </a>
+                    <hr class="hr_submenu" />
+                    <a href="./login.html" class="logout">
+                        <i class="fa-solid fa-right-from-bracket icon-file"></i> Đăng xuất
+                    </a>
+                </div>
+            </div>
+        </div>
+        <section class="content" id="style-scroll-content">
+            <div class="top-content">
+                <div id="btn-upload" class="btn-content">
+                    <div class="upload-btn-wrapper">
+                        <button class="btn">
+                            <span>+</span>
+                            Tải tài liệu lên
+                        </button>
+                        <input type="file" name="myfile" accept=".xls,.xlsx,.xlsb,.txt,.csv,.tsv" />
+                    </div>
+                </div>
+            </div>
+            <div class="table-content" id="style-scroll-table">
+                <table>
+                    <tr>
+                        <th style="width: 5%;">STT</th>
+                        <th style="width: 40%;text-align: start;">Tên file</th>
+                        <th style="width: 20%;text-align: start;">Người tải lên</th>
+                        <th style="width: 15%;">Thời gian tải lên</th>
+                        <th style="width: 20%;">Thao tác</th>
+                    </tr>
+                    <tr>
+                        <td class="td-center">1</td>
+                        <td class="td-filename">
+                            <a href="#" class="filename-link">
+                                <img src="./image/icon-exl.png" alt="document" />
+                                <span title="00._MT_Monthly_Promotion_-_BCC_-_Oct_-_Excl._Ecom_1_9ZlUywJ.xlsx">00._MT_Monthly_Promotion_-_BCC_-_Oct_-_Excl._Ecom_1_9ZlUywJ.xlsx
+                                </span>
+                            </a>
+                        </td>
+                        <td>Admin</td>
+                        <td class="td-center">03/08/2022 6:50</td>
+                        <td class="td-center">
+                            <button class="btn-clear" title="Xóa file">
+                                <i class="fa-regular fa-trash-can icon-trash"></i>
+                            </button>
+                            <button class="modal-btn-pdf" title="Tạo PDF">
+                                <i class="fa-regular fa-file-pdf icon-pdf"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-center">2</td>
+                        <td class="td-filename">
+                            <a href="#" class="filename-link">
+                                <img src="./image/icon-exl.png" alt="document" />
+                                <span title="00._MT_Monthly_Promotion_-_BCC_-_Oct_-_Excl._Ecom_1_9ZlUywJ.xlsx">00._MT_Monthly_Promotion_-_BCC_-_Oct_-_Excl._Ecom_1_9ZlUywJ.xlsx
+                                </span>
+                            </a>
+                        </td>
+                        <td>Admin</td>
+                        <td class="td-center">03/08/2022 6:50</td>
+                        <td class="td-center">
+                            <button class="btn-clear" title="Xóa file">
+                                <i class="fa-regular fa-trash-can icon-trash"></i>
+                            </button>
+                            <button class="modal-btn-pdf" title="Tạo PDF">
+                                <i class="fa-regular fa-file-pdf icon-pdf"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-center">3</td>
+                        <td class="td-filename">
+                            <a href="#" class="filename-link">
+                                <img src="./image/icon-exl.png" alt="document" />
+                                <span title="00._MT_Monthly_Promotion_-_BCC_-_Oct_-_Excl._Ecom_1_9ZlUywJ.xlsx">00._MT_Monthly_Promotion_-_BCC_-_Oct_-_Excl._Ecom_1_9ZlUywJ.xlsx
+                                </span>
+                            </a>
+                        </td>
+                        <td>Admin</td>
+                        <td class="td-center">03/08/2022 6:50</td>
+                        <td class="td-center">
+                            <button class="btn-clear" title="Xóa file">
+                                <i class="fa-regular fa-trash-can icon-trash"></i>
+                            </button>
+                            <button class="modal-btn-pdf" title="Tạo PDF">
+                                <i class="fa-regular fa-file-pdf icon-pdf"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-center">4</td>
+                        <td class="td-filename">
+                            <a href="#" class="filename-link">
+                                <img src="./image/icon-exl.png" alt="document" />
+                                <span title="00._MT_Monthly_Promotion_-_BCC_-_Oct_-_Excl._Ecom_1_9ZlUywJ.xlsx">00._MT_Monthly_Promotion_-_BCC_-_Oct_-_Excl._Ecom_1_9ZlUywJ.xlsx
+                                </span>
+                            </a>
+                        </td>
+                        <td>Admin</td>
+                        <td class="td-center">03/08/2022 6:50</td>
+                        <td class="td-center">
+                            <button class="btn-clear" title="Xóa file">
+                                <i class="fa-regular fa-trash-can icon-trash"></i>
+                            </button>
+                            <button class="modal-btn-pdf" title="Tạo PDF">
+                                <i class="fa-regular fa-file-pdf icon-pdf"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-center">5</td>
+                        <td class="td-filename">
+                            <a href="#" class="filename-link">
+                                <img src="./image/icon-exl.png" alt="document" />
+                                <span title="00._MT_Monthly_Promotion_-_BCC_-_Oct_-_Excl._Ecom_1_9ZlUywJ.xlsx">00._MT_Monthly_Promotion_-_BCC_-_Oct_-_Excl._Ecom_1_9ZlUywJ.xlsx
+                                </span>
+                            </a>
+                        </td>
+                        <td>Admin</td>
+                        <td class="td-center">03/08/2022 6:50</td>
+                        <td class="td-center">
+                            <button class="btn-clear" title="Xóa file">
+                                <i class="fa-regular fa-trash-can icon-trash"></i>
+                            </button>
+                            <button class="modal-btn-pdf" title="Tạo PDF">
+                                <i class="fa-regular fa-file-pdf icon-pdf"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-center">6</td>
+                        <td class="td-filename">
+                            <a href="#" class="filename-link">
+                                <img src="./image/icon-exl.png" alt="document" />
+                                <span title="00._MT_Monthly_Promotion_-_BCC_-_Oct_-_Excl._Ecom_1_9ZlUywJ.xlsx">00._MT_Monthly_Promotion_-_BCC_-_Oct_-_Excl._Ecom_1_9ZlUywJ.xlsx
+                                </span>
+                            </a>
+                        </td>
+                        <td>Admin</td>
+                        <td class="td-center">03/08/2022 6:50</td>
+                        <td class="td-center">
+                            <button class="btn-clear" title="Xóa file">
+                                <i class="fa-regular fa-trash-can icon-trash"></i>
+                            </button>
+                            <button class="modal-btn-pdf" title="Tạo PDF">
+                                <i class="fa-regular fa-file-pdf icon-pdf"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-center">7</td>
+                        <td class="td-filename">
+                            <a href="#" class="filename-link">
+                                <img src="./image/icon-exl.png" alt="document" />
+                                <span title="00._MT_Monthly_Promotion_-_BCC_-_Oct_-_Excl._Ecom_1_9ZlUywJ.xlsx">00._MT_Monthly_Promotion_-_BCC_-_Oct_-_Excl._Ecom_1_9ZlUywJ.xlsx
+                                </span>
+                            </a>
+                        </td>
+                        <td>Admin</td>
+                        <td class="td-center">03/08/2022 6:50</td>
+                        <td class="td-center">
+                            <button class="btn-clear" title="Xóa file">
+                                <i class="fa-regular fa-trash-can icon-trash"></i>
+                            </button>
+                            <button class="modal-btn-pdf" title="Tạo PDF">
+                                <i class="fa-regular fa-file-pdf icon-pdf"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-center">8</td>
+                        <td class="td-filename">
+                            <a href="#" class="filename-link">
+                                <img src="./image/icon-exl.png" alt="document" />
+                                <span title="00._MT_Monthly_Promotion_-_BCC_-_Oct_-_Excl._Ecom_1_9ZlUywJ.xlsx">00._MT_Monthly_Promotion_-_BCC_-_Oct_-_Excl._Ecom_1_9ZlUywJ.xlsx
+                                </span>
+                            </a>
+                        </td>
+                        <td>Admin</td>
+                        <td class="td-center">03/08/2022 6:50</td>
+                        <td class="td-center">
+                            <button class="btn-clear" title="Xóa file">
+                                <i class="fa-regular fa-trash-can icon-trash"></i>
+                            </button>
+                            <button class="modal-btn-pdf" title="Tạo PDF">
+                                <i class="fa-regular fa-file-pdf icon-pdf"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-center">9</td>
+                        <td class="td-filename">
+                            <a href="#" class="filename-link">
+                                <img src="./image/icon-exl.png" alt="document" />
+                                <span title="00._MT_Monthly_Promotion_-_BCC_-_Oct_-_Excl._Ecom_1_9ZlUywJ.xlsx">00._MT_Monthly_Promotion_-_BCC_-_Oct_-_Excl._Ecom_1_9ZlUywJ.xlsx
+                                </span>
+                            </a>
+                        </td>
+                        <td>Admin</td>
+                        <td class="td-center">03/08/2022 6:50</td>
+                        <td class="td-center">
+                            <button class="btn-clear" title="Xóa file">
+                                <i class="fa-regular fa-trash-can icon-trash"></i>
+                            </button>
+                            <button class="modal-btn-pdf" title="Tạo PDF">
+                                <i class="fa-regular fa-file-pdf icon-pdf"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-center">10</td>
+                        <td class="td-filename">
+                            <a href="#" class="filename-link">
+                                <img src="./image/icon-exl.png" alt="document" />
+                                <span title="00._MT_Monthly_Promotion_-_BCC_-_Oct_-_Excl._Ecom_1_9ZlUywJ.xlsx">00._MT_Monthly_Promotion_-_BCC_-_Oct_-_Excl._Ecom_1_9ZlUywJ.xlsx
+                                </span>
+                            </a>
+                        </td>
+                        <td>Admin</td>
+                        <td class="td-center">03/08/2022 6:50</td>
+                        <td class="td-center">
+                            <button class="btn-clear" title="Xóa file">
+                                <i class="fa-regular fa-trash-can icon-trash"></i>
+                            </button>
+                            <button class="modal-btn-pdf" title="Tạo PDF">
+                                <i class="fa-regular fa-file-pdf icon-pdf"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-center">11</td>
+                        <td class="td-filename">
+                            <a href="#" class="filename-link">
+                                <img src="./image/icon-exl.png" alt="document" />
+                                <span title="00._MT_Monthly_Promotion_-_BCC_-_Oct_-_Excl._Ecom_1_9ZlUywJ.xlsx">00._MT_Monthly_Promotion_-_BCC_-_Oct_-_Excl._Ecom_1_9ZlUywJ.xlsx
+                                </span>
+                            </a>
+                        </td>
+                        <td>Admin</td>
+                        <td class="td-center">03/08/2022 6:50</td>
+                        <td class="td-center">
+                            <button class="btn-clear" title="Xóa file">
+                                <i class="fa-regular fa-trash-can icon-trash"></i>
+                            </button>
+                            <button class="modal-btn-pdf" title="Tạo PDF">
+                                <i class="fa-regular fa-file-pdf icon-pdf"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-center">12</td>
+                        <td class="td-filename">
+                            <a href="#" class="filename-link">
+                                <img src="./image/icon-exl.png" alt="document" />
+                                <span title="00._MT_Monthly_Promotion_-_BCC_-_Oct_-_Excl._Ecom_1_9ZlUywJ.xlsx">00._MT_Monthly_Promotion_-_BCC_-_Oct_-_Excl._Ecom_1_9ZlUywJ.xlsx
+                                </span>
+                            </a>
+                        </td>
+                        <td>Admin</td>
+                        <td class="td-center">03/08/2022 6:50</td>
+                        <td class="td-center">
+                            <button class="btn-clear" title="Xóa file">
+                                <i class="fa-regular fa-trash-can icon-trash"></i>
+                            </button>
+                            <button class="modal-btn-pdf" title="Tạo PDF">
+                                <i class="fa-regular fa-file-pdf icon-pdf"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-center">13</td>
+                        <td class="td-filename">
+                            <a href="#" class="filename-link">
+                                <img src="./image/icon-exl.png" alt="document" />
+                                <span title="00._MT_Monthly_Promotion_-_BCC_-_Oct_-_Excl._Ecom_1_9ZlUywJ.xlsx">00._MT_Monthly_Promotion_-_BCC_-_Oct_-_Excl._Ecom_1_9ZlUywJ.xlsx
+                                </span>
+                            </a>
+                        </td>
+                        <td>Admin</td>
+                        <td class="td-center">03/08/2022 6:50</td>
+                        <td class="td-center">
+                            <button class="btn-clear" title="Xóa file">
+                                <i class="fa-regular fa-trash-can icon-trash"></i>
+                            </button>
+                            <button class="modal-btn-pdf" title="Tạo PDF">
+                                <i class="fa-regular fa-file-pdf icon-pdf"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-center">14</td>
+                        <td class="td-filename">
+                            <a href="#" class="filename-link">
+                                <img src="./image/icon-exl.png" alt="document" />
+                                <span title="00._MT_Monthly_Promotion_-_BCC_-_Oct_-_Excl._Ecom_1_9ZlUywJ.xlsx">00._MT_Monthly_Promotion_-_BCC_-_Oct_-_Excl._Ecom_1_9ZlUywJ.xlsx
+                                </span>
+                            </a>
+                        </td>
+                        <td>Admin</td>
+                        <td class="td-center">03/08/2022 6:50</td>
+                        <td class="td-center">
+                            <button class="btn-clear" title="Xóa file">
+                                <i class="fa-regular fa-trash-can icon-trash"></i>
+                            </button>
+                            <button class="modal-btn-pdf" title="Tạo PDF">
+                                <i class="fa-regular fa-file-pdf icon-pdf"></i>
+                            </button>
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="copy-right">
+            <p>&copy; <a href="https://pvssolution.com">pvssolution.com</a></p>
+        </div>
+    </footer>
+    <!-- Modal Create PDF -->
+    <div id="createPDF" class="modal modal-open-pdf">
+        <form action="/" method="post">
+            <div class="modal-container modal-container-pdf">
+                <div class="modal-header ">
+                    <i class="fa-regular fa-file-pdf"></i>
+                    <p class="title">Tạo PDF</p>
+                </div>
+
+                <div class="modal-body">
+                    <div class="input-group">
+                        <div class="input-item">
+                            <p class="modal-label">Danh mục</p>
+                            <select class="select-category" multiple="multiple">
+
+                                    <option value="Công việc" data-badge="">Công việc</option>
+                                    <option value="Hóa đơn" data-badge="">Hóa đơn</option>
+                                    <option value="Khách hàng VIP" data-badge="">Khách hàng VIP</option>
+                                    <option value="Khách hàng tiềm năng" data-badge="">Khách hàng tiềm năng</option>
+                                    <option value="Văn bản ký" data-badge="">Văn bản ký</option>
+                    
+                            </select>
+                        </div>
+                        <div class="input-item">
+                            <p class="modal-label">Loại Account</p>
+                            <select class="select-account" multiple="multiple">
+
+                                    <option value="Account 1" data-badge="">Account 1</option>
+                                    <option value="Account 2" data-badge="">Account 2</option>
+                                    <option value="Account 3" data-badge="">Account 3</option>
+                    
+                                </select>
+                        </div>
+
+                    </div>
+                </div>
+                <hr>
+                <div class="modal-footer">
+                    <button class="btn--primary">Tạo file</button>
+                </div>
+
+                <a href="#" class="modal-close modal-close-pdf">&times;</a>
+            </div>
+        </form>
+    </div>
+
+    <!-- Modal Info -->
+    <div id="info" class="modal">
+        <form action="/" method="post">
+            <div class="modal__content">
+                <div class="modal__title">
+                    <img src="./image/UserList.png" alt="UserList">
+                    <p>Thông tin tài khoản</p>
+                </div>
+
+                <div class="modal__detail">
+                    <div class="user">
+                        <span class="avarta_name">D</span>
+                        <div class="info_name">
+                            <p>Nguyễn Thanh Điền</p>
+                            <small>User: 07/08/2022</small>
+                        </div>
+                    </div>
+
+                    <div class="input_group">
+                        <label for="full_name">
+                            Họ và tên
+                            <input type="text" name="full_name" placeholder="Họ và tên">
+                        </label>
+                        <label for="phone">
+                            Số điện thoại
+                            <input type="tel" id="numbPhone" name="phone" placeholder="0909 999 999" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                        </label>
+                        <label for="email">
+                            Email
+                            <input type="email" name="email" placeholder="Nhập email" required>
+                        </label>
+                        <label for="passwd">
+                            Mật khẩu
+                            <div class="form-group has-feedback">
+                                <input type="password" name="passwd" id="password" placeholder="Nhập mật khẩu">
+                                <i class="showpass show-eye-open fas fa-eye"></i>
+                              </div>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="modal__title-child">
+                    <p>Thông tin công ty</p>
+                </div>
+                <div class="modal__detail">
+                    <div class="input_group">
+                        <label for="company_name">
+                            Tên công ty
+                            <input type="text" name="company_name" placeholder="Nhập tên công ty">
+                        </label>
+
+                        <label for="title_name">
+                            Chức danh
+                            <input type="text" name="title_name" placeholder="Nhập chức danh">
+                        </label>
+
+                    </div>
+                </div>
+                <div class="modal__title-child">
+                    <p>Thông tin địa chỉ</p>
+                </div>
+                <div class="modal__detail">
+                    <div class="input_group input_address">
+                        <label for="company_address">
+                            Địa chỉ
+                            <input type="text" name="company_address" placeholder="Nhập thông tin địa chỉ">
+                        </label>
+
+                    </div>
+                </div>
+                <div class="modal__footer">
+                    <button class="btn--secondary">Huỷ</button>
+                    <button class="btn--primary ml-5">Lưu</button>
+                </div>
+
+                <a href="#" class="modal__close">&times;</a>
+            </div>
+        </form>
+    </div>
+
+    <!-- Modal Upload E-Sign -->
+    <div id="eSign" class="modal">
+        <form action="/" method="post">
+            <div class="modal__content">
+                <div class="modal__title">
+                    <i class="far fa-file-alt icon-file"></i>
+                    <p> Xuất log</p>
+                </div>
+                <div class="modal__detail">
+                    <div class="input_group">
+                        <div class="input-date">
+                            Từ <input type="date" name="" id=""> đến <input type="date" name="" id="">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal__footer">
+                    <button type="submit" class="btn--primary">Xuất</button>
+                </div>
+                <a href="#" class="modal__close">&times;</a>
+            </div>
+        </form>
+    </div>
+
+    <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-rc.0/js/select2.min.js" integrity="sha512-4MvcHwcbqXKUHB6Lx3Zb5CEAVoE9u84qN+ZSMM6s7z8IeJriExrV3ND5zRze9mxNlABJ6k864P/Vl8m0Sd3DtQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        // multi seclect
+        $(".select-category").select2({
+            closeOnSelect: false,
+            placeholder: "Chọn danh mục",
+            allowHtml: true,
+            allowClear: true,
+            tags: true
+        });
+        $(".select-account").select2({
+            closeOnSelect: false,
+            placeholder: "Chọn loại account",
+            allowHtml: true,
+            allowClear: true,
+            tags: true
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hideshowpassword/2.0.8/hideShowPassword.min.js"></script>
+    <script>
+        // toggle password visibility
+        $('#password + .showpass').on('click', function() {
+            $(this).toggleClass('show-eye-close').toggleClass('show-eye-open'); // toggle our classes for the eye icon
+            $('#password').togglePassword(); // activate the hideShowPassword plugin
+        });
+    </script>
+    <script type="text/javascript">
+        $(function() {
+            /*Check & uncheck all*/
+            $(document).on('change', '.checkall', function() {
+                var $_this = $(this);
+                $('.checkitem').prop('checked', $_this.prop('checked'));
+            });
+        });
+    </script>
+    <script src="./js/menu.js"></script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
