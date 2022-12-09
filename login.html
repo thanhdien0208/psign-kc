@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="icon" href="./image/P-sign logo blue.png" type="image/gif" sizes="16x16" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body id="page--login">
+    <div class="overlay">
+        <form>
+            <div class="con">
+                <header class="head-form">
+                    <a href="https://pvssolution.com/">
+                        <img src="./image/P-sign_logo_white.png" alt="logo">
+                    </a>
+                </header>
+                <div class="field-set">
+                    <span class="input-item">
+                        <i class="fa fa-user-circle"></i>
+                    </span>
+                    <input class="form-input" id="txt-input" type="text" placeholder="UserName" required>
+                    <br>
+                    <span class="input-item">
+                        <i class="fa fa-key"></i>
+                    </span>
+                    <input class="form-input" type="password" placeholder="Password" id="pwd" name="password" required>
+                    <span>
+                        <i class="fa fa-eye" aria-hidden="true"  type="button" id="eye"></i>
+                    </span>
+                    <br>
+                    <button type="submit" class="log-in"> <a href="./index.html">Log In</a> </button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <footer>
+        <div class="copy-right">
+            <p>&copy; <a href="https://pvssolution.com">pvssolution.com</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Show/hide password onClick of button using Javascript only
+        function show() {
+            var p = document.getElementById('pwd');
+            p.setAttribute('type', 'text');
+        }
+
+        function hide() {
+            var p = document.getElementById('pwd');
+            p.setAttribute('type', 'password');
+        }
+        var pwShown = 0;
+        document.getElementById("eye").addEventListener("click", function() {
+            if (pwShown == 0) {
+                pwShown = 1;
+                show();
+            } else {
+                pwShown = 0;
+                hide();
+            }
+        }, false);
+    </script>
+</body>
+
+</html>

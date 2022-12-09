@@ -1277,117 +1277,6 @@ button {
 }
 
 
-/* Footer */
-
-footer {
-    position: fixed;
-    bottom: 10px;
-    left: 50%;
-}
-
-footer p {
-    color: #003a8c;
-    opacity: 0.8;
-}
-
-footer a {
-    color: #003a8c;
-    opacity: 0.8;
-}
-
-
-/* =========Page VB Cho Xac Nhan======== */
-
-#page--wait .top-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-#page--wait .btn-trash {
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-}
-
-#page--wait .btn-trash button {
-    background: none;
-    border: none;
-    outline: none;
-    padding-right: 10px;
-}
-
-#page--wait .btn-trash button .icon-delete {
-    font-size: 21px;
-}
-
-#page--wait .btn-trash a {
-    width: 40px;
-    height: 40px;
-    background: #ECECEC;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#page--wait .btn-trash a:hover {
-    background: #e6ecf4;
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
-}
-
-#page--wait .btn-trash img {
-    width: 20px;
-    object-fit: cover;
-}
-
-#page--wait .btn-check {
-    margin-bottom: 20px;
-}
-
-#page--wait .btn-check button {
-    display: flex;
-    align-items: center;
-}
-
-#page--wait .btn-check button img {
-    object-fit: cover;
-    margin-right: 5px;
-}
-
-#page--wait .table-content .box-group {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-}
-
-#page--wait .table-content td .box {
-    padding: 3px 8px;
-    border-radius: 20px;
-    display: inline-block;
-}
-
-#page--wait .table-content td .box-account {
-    color: #C57620;
-    border: 1px solid #C57620;
-}
-
-#page--wait .table-content td .box-category {
-    color: #09797B;
-    border: 1px solid #09797B;
-}
-
-#page--wait .table-content td .box-mail {
-    color: #3E79D6;
-    border: 1px solid #3E79D6;
-}
-
-#page--wait .table-content td .icon-view {
-    font-size: 25px;
-    color: #003a8c;
-}
-
-
 /*========== Modal View PDF============*/
 
 #viewPDF {
@@ -1473,4 +1362,303 @@ footer a {
     outline: none;
     background: #E6ECF4;
     padding: 3px;
+}
+
+
+/* Footer */
+
+footer {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+}
+
+footer p {
+    color: #003a8c;
+    opacity: 0.8;
+}
+
+footer a {
+    color: #003a8c;
+    opacity: 0.8;
+}
+
+
+/* =========Page Sub======== */
+
+#page--sub .top-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#page--sub .btn-trash {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+#page--sub .btn-trash button {
+    background: none;
+    border: none;
+    outline: none;
+    padding-right: 10px;
+}
+
+#page--sub .btn-trash button .icon-delete {
+    font-size: 21px;
+}
+
+#page--sub .btn-trash a {
+    width: 40px;
+    height: 40px;
+    background: #ECECEC;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#page--sub .btn-trash a:hover {
+    background: #e6ecf4;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+}
+
+#page--sub .btn-trash img {
+    width: 20px;
+    object-fit: cover;
+}
+
+#page--sub .btn-check {
+    margin-bottom: 20px;
+}
+
+#page--sub .btn-check button {
+    display: flex;
+    align-items: center;
+}
+
+#page--sub .btn-check button img {
+    object-fit: cover;
+    margin-right: 5px;
+}
+
+#page--sub .display-r {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.table-content .box-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.table-content td .box {
+    padding: 3px 8px;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+.table-content td .box-account {
+    color: #C57620;
+    border: 1px solid #C57620;
+}
+
+.table-content td .box-category {
+    color: #09797B;
+    border: 1px solid #09797B;
+}
+
+.table-content td .box-mail {
+    color: #3E79D6;
+    border: 1px solid #3E79D6;
+}
+
+.table-content td .icon-view {
+    font-size: 25px;
+    color: #003a8c;
+}
+
+
+/*========= Page Delete =========*/
+
+#page--delete .header-content .icon-back {
+    color: #003a8c;
+    background: #fff;
+    padding: 5px 10px;
+    margin-right: 15px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+}
+
+#page--delete .top-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#page--delete .top-content .alarm-content p {
+    font-size: 14px;
+}
+
+#page--delete .top-content .alarm-content span {
+    color: #f30000;
+}
+
+#page--delete .btn--primary {
+    display: flex;
+}
+
+#page--delete .icon-restore {
+    font-size: 15px;
+    padding-right: 5px;
+}
+
+
+/* ===== Page Login ===== */
+
+#page--login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#page--login form {
+    width: 450px;
+    min-height: 350px;
+    height: auto;
+    border-radius: 5px;
+    margin: 2% auto;
+    box-shadow: 0 0px 8px rgba(0, 0, 0, 0.2);
+    padding: 2%;
+    background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
+}
+
+#page--login form .con {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+#page--login header {
+    margin: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+#page--login header img {
+    width: 96px;
+    object-fit: cover;
+}
+
+#page--login header p {
+    letter-spacing: 0.05em;
+}
+
+#page--login .input-item {
+    background: #fff;
+    color: #333;
+    padding: 13px 0px 15px 9px;
+    border-radius: 5px 0px 0px 5px;
+}
+
+
+/* Show/hide password Font Icon */
+
+#eye {
+    background: #fff;
+    color: #333;
+    margin: 5.9px 0 0 0;
+    margin-left: -20px;
+    padding: 15px 9px 19px 0px;
+    border-radius: 0px 5px 5px 0px;
+    float: right;
+    position: relative;
+    right: 1%;
+    top: -.2%;
+    z-index: 5;
+    cursor: pointer;
+}
+
+#page--login input[class="form-input"] {
+    width: 240px;
+    height: 50px;
+    margin-top: 2%;
+    padding: 15px;
+    font-size: 16px;
+    color: #5E6472;
+    outline: none;
+    border: none;
+    border-radius: 0px 5px 5px 0px;
+    transition: 0.2s linear;
+}
+
+#page--login input[id="txt-input"] {
+    width: 250px;
+}
+
+#page--login input:focus {
+    transform: translateX(-2px);
+    border-radius: 5px;
+}
+
+#page--login button {
+    display: inline-block;
+    color: #fff;
+    width: 280px;
+    height: 50px;
+    padding: 0 20px;
+    background: #003a8c;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s linear;
+    margin: 7% auto;
+    letter-spacing: 0.05em;
+}
+
+#page--login .submits {
+    width: 48%;
+    display: inline-block;
+    float: left;
+    margin-left: 2%;
+}
+
+#page--login button:hover {
+    transform: translatey(3px);
+    box-shadow: none;
+}
+
+#page--login button a {
+    color: #fff;
+}
+
+
+/* buttons hover Animation */
+
+#page--login button:hover {
+    animation: ani9 0.4s ease-in-out infinite alternate;
+}
+
+#page--login footer {
+    position: fixed;
+    bottom: 10px;
+    left: 46%;
+}
+
+@keyframes ani9 {
+    0% {
+        transform: translateY(3px);
+    }
+    100% {
+        transform: translateY(5px);
+    }
 }
