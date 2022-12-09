@@ -688,6 +688,10 @@ button {
     padding: 10px;
 }
 
+tr:hover td {
+    background: #F5F5F5 !important;
+}
+
 
 /* style scroll content/table */
 
@@ -1480,6 +1484,96 @@ footer a {
     color: #003a8c;
 }
 
+.table-content .checkitem:checked+tr:hover td {
+    background-color: #f5f5f5 !important;
+}
+
+
+/* The container */
+
+#page--sub label {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+/* Hide the browser's default checkbox */
+
+#page--sub label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+
+/* Create a custom checkbox */
+
+#page--sub .checkmark {
+    position: absolute;
+    top: -5px;
+    left: 10px;
+    height: 20px;
+    width: 20px;
+    border-radius: 4px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+
+/* On mouse-over, add a grey background color */
+
+#page--sub label:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+
+/* When the checkbox is checked, add a blue background */
+
+#page--sub label input:checked~.checkmark {
+    background-color: #003a8c;
+}
+
+
+/* Create the checkmark/indicator (hidden when not checked) */
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+
+/* Show the checkmark when checked */
+
+#page--sub label input:checked~.checkmark:after {
+    display: block;
+}
+
+
+/* Style the checkmark/indicator */
+
+#page--sub label .checkmark:after {
+    left: 5px;
+    top: 0px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
 
 /*========= Page Delete =========*/
 
@@ -1520,20 +1614,24 @@ footer a {
 /* ===== Page Login ===== */
 
 #page--login {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background: #000;
+    position: relative;
 }
 
 #page--login form {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     width: 450px;
-    min-height: 350px;
+    max-height: 430px;
     height: auto;
     border-radius: 5px;
-    margin: 2% auto;
-    box-shadow: 0 0px 8px rgba(0, 0, 0, 0.2);
-    padding: 2%;
-    background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
+    margin: auto;
+    box-shadow: 0 0px 8px rgba(255, 255, 255, 0.2);
+    padding: 1%;
+    background: linear-gradient(90deg, #3a47d5 0%, #003a8c 100%);
 }
 
 #page--login form .con {
@@ -1563,7 +1661,7 @@ footer a {
 
 #page--login .input-item {
     background: #fff;
-    color: #333;
+    color: #003a8c;
     padding: 13px 0px 15px 9px;
     border-radius: 5px 0px 0px 5px;
 }
@@ -1573,7 +1671,7 @@ footer a {
 
 #eye {
     background: #fff;
-    color: #333;
+    color: #003a8c;
     margin: 5.9px 0 0 0;
     margin-left: -20px;
     padding: 15px 9px 19px 0px;
@@ -1581,7 +1679,7 @@ footer a {
     float: right;
     position: relative;
     right: 1%;
-    top: -.2%;
+    top: -.1%;
     z-index: 5;
     cursor: pointer;
 }
@@ -1590,13 +1688,20 @@ footer a {
     width: 240px;
     height: 50px;
     margin-top: 2%;
+    margin-bottom: 5px;
     padding: 15px;
-    font-size: 16px;
-    color: #5E6472;
+    font-size: 14px;
+    font-weight: 500;
+    color: #003a8c;
     outline: none;
     border: none;
     border-radius: 0px 5px 5px 0px;
     transition: 0.2s linear;
+}
+
+#page--login input::placeholder {
+    color: #003a8c;
+    opacity: 0.5;
 }
 
 #page--login input[id="txt-input"] {
@@ -1610,11 +1715,12 @@ footer a {
 
 #page--login button {
     display: inline-block;
-    color: #fff;
+    color: #003a8c;
+    font-weight: 600;
     width: 280px;
     height: 50px;
     padding: 0 20px;
-    background: #003a8c;
+    background: #E6ECF4;
     border-radius: 5px;
     outline: none;
     border: none;
@@ -1637,10 +1743,6 @@ footer a {
     box-shadow: none;
 }
 
-#page--login button a {
-    color: #fff;
-}
-
 
 /* buttons hover Animation */
 
@@ -1661,4 +1763,56 @@ footer a {
     100% {
         transform: translateY(5px);
     }
+}
+
+
+/* ==== Page Thong tin ho tro ==== */
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 10% 0;
+}
+
+.info-soft {
+    width: 55%;
+    height: 400px;
+    background: linear-gradient(90deg, #3a47d5 0%, #003a8c 100%);
+    text-align: center;
+    border-radius: 4px;
+}
+
+.info-soft .row {
+    margin: 10% 0;
+}
+
+.info-soft img {
+    width: 200px;
+    object-fit: cover;
+}
+
+.info-soft p {
+    font-weight: 600;
+    font-size: 20px;
+    color: #fff;
+}
+
+.info-company {
+    line-height: 30px;
+}
+
+.info-company h3 {
+    font-weight: 600;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.info-company ul {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.info-company li {
+    list-style: square;
 }

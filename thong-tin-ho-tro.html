@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Psign KC</title>
+    <link rel="icon" href="./image/P-sign logo blue.png" type="image/gif" sizes="16x16" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-rc.0/css/select2.min.css" integrity="sha512-aD9ophpFQ61nFZP6hXYu4Q/b/USW7rpLCQLX6Bi0WJHXNO7Js/fUENpBQf/+P4NtpzNX0jSgR5zVvPOJp+W2Kg==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+    <div class="sidebar open">
+        <div class="toggle">
+            <i class="fas fa-chevron-right"></i>
+        </div>
+        <div class="logo">
+            <a href="./index.html"><img src="./image/P-sign_logo_white.png" alt="logo" /></a>
+            <h3>Kimberly-Clark</h3>
+        </div>
+        <nav>
+            <!-- <div class="nav-title">Management</div> -->
+            <div id="navLink">
+                <a class="nav-item nav-link active" href="./index.html">
+                    <i class="fas fa-file-excel fix-size"></i>
+                    <span>File Excel</span>
+                </a>
+
+                <a class="nav-item nav-link dropdown-btn">
+                    <i class="fa-solid fa-folder-open"></i>
+                    <span>Quản lý văn bản</span>
+                    <i class="fas fa-angle-down icon-dropdown"></i>
+                </a>
+                <ul class="sub-menu">
+                    <li class="sub-item nav-link">
+                        <a href="./vb-cho-xac-nhan.html">
+                            <i class="fa-solid fa-file-circle-exclamation"></i>
+                            <span>Văn bản chờ xác nhận</span>
+                        </a>
+                    </li>
+                    <li class="sub-item nav-link">
+                        <a href="./vb-da-xac-nhan.html">
+                            <i class="fas fa-file-circle-check"></i>
+                            <span>Văn bản đã xác nhận</span>
+                        </a>
+                    </li>
+                    <li class="sub-item nav-link">
+                        <a href="./vb-da-ky.html">
+                            <i class="fas fa-file-signature"></i>
+                            <span>Văn bản đã ký</span>
+                        </a>
+                    </li>
+                    <li class="sub-item nav-link">
+                        <a href="./vb-chua-duoc-quan-ly.html">
+                            <i class="fa-solid fa-file-circle-question"></i>
+                            <span>Văn bản chưa được quản lý</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <a class="nav-item nav-link" href="./quan-ly-nhan-su.html">
+                    <i class="fa-solid fa-users"></i>
+                    <span>Quản lý nhân sự</span>
+                </a>
+
+                <hr />
+                <!-- <div class="nav-title">Supports</div> -->
+
+                <a class="nav-item nav-link" href="./thong-tin-ho-tro.html">
+                    <i class="fa-sharp fa-solid fa-circle-info"></i>
+                    <span>Thông tin hỗ trợ</span>
+                </a>
+            </div>
+        </nav>
+    </div>
+
+    <div class="main-content open">
+        <div class="header-content">
+            <div class="header-title">
+                <h3>Thông tin hỗ trợ</h3>
+
+            </div>
+            <div class="header-info header-dropdown">
+                <button onclick="dropDownInfo()" class="btn-info">
+            <img
+              class="dropbtn"
+              src="./image/avatar-icon-blue.png"
+              alt="avatar-icon"
+            />
+
+            <i class="fa-solid fa-angle-down dropbtn"></i>
+          </button>
+
+                <div id="navDropdown" class="dropdown-content">
+                    <a href="#info" class="info">
+                        <i class="fa-solid fa-user-gear icon-file"></i> Thông tin tài khoản
+                    </a>
+                    <a href="#eSign" class="esign">
+                        <i class="fa-solid fa-file-lines icon-file"></i> Xuất log
+                    </a>
+                    <hr class="hr_submenu" />
+                    <a href="./login.html" class="logout">
+                        <i class="fa-solid fa-right-from-bracket icon-file"></i> Đăng xuất
+                    </a>
+                </div>
+            </div>
+        </div>
+        <section class="content">
+            <div class="container">
+
+                <div class="info-company">
+                    <h3>Công ty TNHH Phần Mềm PVS</h3>
+                    <ul>
+                        <li>
+                            <p>Địa chỉ: 60 Đường D1, Phường Tân Hưng, Quận 7, Thành phố Hồ Chí Minh</p>
+                        </li>
+                        <li>
+                            <p>Mail: Support@pvs.com.vn</p>
+                        </li>
+                        <li>
+                            <p>Hotline: (028) 777 39 999</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="info-soft">
+                    <div class="row">
+                        <img src="./image/P-sign_logo_white.png" alt="logo">
+                        <p>Psign là phần mềm ký hợp đồng điện tử được phát triển bởi PVS</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="copy-right">
+            <p>&copy; <a href="https://pvssolution.com">pvssolution.com</a></p>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hideshowpassword/2.0.8/hideShowPassword.min.js"></script>
+    <script>
+        // toggle password visibility
+        $('#password + .showpass').on('click', function() {
+            $(this).toggleClass('show-eye-close').toggleClass('show-eye-open'); // toggle our classes for the eye icon
+            $('#password').togglePassword(); // activate the hideShowPassword plugin
+        });
+    </script>
+
+    <script src="./js/menu.js"></script>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
