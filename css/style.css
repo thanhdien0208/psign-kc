@@ -1817,3 +1817,57 @@ footer a {
 .info-company li {
     list-style: square;
 }
+
+
+/* ====== Page 404 ====== */
+
+#page--404 {
+    background: linear-gradient(90deg, #3a47d5 0%, #003a8c 100%);
+    display: flex;
+    color: #fff;
+}
+
+#page--404 .container {
+    margin: auto;
+    display: block;
+    text-align: center;
+}
+
+#page--404 .container .error {
+    position: relative;
+}
+
+#page--404 .container .error-title {
+    font-size: 150px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, rgba(96, 2, 31, 1) 0%, rgba(181, 12, 47, 5) 50%, rgba(255, 0, 52, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all .5s;
+}
+
+#page--404 .container span {
+    font-size: 200px;
+}
+
+#page--404 .container img {
+    width: 250%;
+    position: absolute;
+    top: -130%;
+    left: 10px;
+}
+
+#page--404 .container .error-message-1 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+#page--404 .container .error-message-2 {
+    font-weight: 600;
+}
+
+#page--404 .container .error-message-3 {
+    margin-top: 20px;
+    font-style: italic;
+}
