@@ -689,7 +689,11 @@ button {
 }
 
 tr:hover td {
-    background: #F5F5F5 !important;
+    background: #f5f5f5 !important;
+}
+
+table.table tbody tr.selected td {
+    background-color: #f5f5f5 !important;
 }
 
 
@@ -1017,12 +1021,12 @@ tr:hover td {
     grid-template-columns: 100%;
 }
 
-#info .modal__content .modal__detail .input_group label {
+#info .modal__content .modal__detail .input_group .input_title {
     font-size: 14px;
     position: relative;
 }
 
-#info .modal__content .modal__detail .input_group input {
+#info .modal__content .modal__detail .input_group .input_title .input_item {
     width: 100%;
     outline: none;
     border: 1px solid #eee;
@@ -1032,11 +1036,11 @@ tr:hover td {
     color: #003a8c;
 }
 
-#info .modal__content .modal__detail .input_group input:focus {
+#info .modal__content .modal__detail .input_group .input_item:focus {
     outline: 1px solid #003a8c;
 }
 
-#info .modal__content .modal__detail .input_group input::placeholder {
+#info .modal__content .modal__detail .input_group .input_item::placeholder {
     color: #b4b4b4;
     font-size: 13px;
 }
@@ -1491,7 +1495,8 @@ footer a {
 
 /* The container */
 
-#page--sub label {
+#page--sub .input_label,
+#page--delete .input_label {
     display: block;
     position: relative;
     padding-left: 35px;
@@ -1507,7 +1512,8 @@ footer a {
 
 /* Hide the browser's default checkbox */
 
-#page--sub label input {
+#page--sub .input_label input,
+#page--delete .input_label input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
@@ -1518,7 +1524,8 @@ footer a {
 
 /* Create a custom checkbox */
 
-#page--sub .checkmark {
+#page--sub .checkmark,
+#page--delete .checkmark {
     position: absolute;
     top: -5px;
     left: 10px;
@@ -1532,21 +1539,24 @@ footer a {
 
 /* On mouse-over, add a grey background color */
 
-#page--sub label:hover input~.checkmark {
+#page--sub label:hover input~.checkmark,
+#page--delete label:hover input~.checkmark {
     background-color: #ccc;
 }
 
 
 /* When the checkbox is checked, add a blue background */
 
-#page--sub label input:checked~.checkmark {
+#page--sub label input:checked~.checkmark,
+#page--delete label input:checked~.checkmark {
     background-color: #003a8c;
 }
 
 
 /* Create the checkmark/indicator (hidden when not checked) */
 
-.checkmark:after {
+#page--sub .checkmark:after,
+#page--delete .checkmark:after {
     content: "";
     position: absolute;
     display: none;
@@ -1555,14 +1565,16 @@ footer a {
 
 /* Show the checkmark when checked */
 
-#page--sub label input:checked~.checkmark:after {
+#page--sub label input:checked~.checkmark:after,
+#page--delete label input:checked~.checkmark:after {
     display: block;
 }
 
 
 /* Style the checkmark/indicator */
 
-#page--sub label .checkmark:after {
+#page--sub label .checkmark:after,
+#page--delete label .checkmark:after {
     left: 5px;
     top: 0px;
     width: 5px;
