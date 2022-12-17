@@ -451,9 +451,14 @@
                             <p class="modal-label">Loại Account</p>
                             <select class="select-account" multiple="multiple">
 
-                                    <option value="Account 1" data-badge="">Account 1</option>
-                                    <option value="Account 2" data-badge="">Account 2</option>
-                                    <option value="Account 3" data-badge="">Account 3</option>
+                                    <option value="All">Tất cả</option>
+                                    <option value="Ecom">Ecom</option>
+                                    <option value="Toan Thi">Toan Thi</option>
+                                    <option value="E-MART">E-MART</option>
+                                    <option value="Emart Sala">Emart Sala</option>
+                                    <option value="Vnshop">Vnshop</option>
+                                    <option value="Tiki">Tiki</option>
+                                    <option value="Shopee">Shopee</option>
                     
                                 </select>
                         </div>
@@ -601,15 +606,7 @@
             $('#password').togglePassword(); // activate the hideShowPassword plugin
         });
     </script>
-    <script type="text/javascript">
-        $(function() {
-            /*Check & uncheck all*/
-            $(document).on('change', '.checkall', function() {
-                var $_this = $(this);
-                $('.checkitem').prop('checked', $_this.prop('checked'));
-            });
-        });
-    </script>
+
     <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
     <script src="./js/script.js"></script>

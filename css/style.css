@@ -236,7 +236,7 @@ button {
 .sidebar .logo img {
     width: 46px;
     transition: 0.4s;
-    margin-left: -40px;
+    margin-left: -30px;
 }
 
 .sidebar.open .logo img {
@@ -246,10 +246,10 @@ button {
 
 .sidebar .logo h3 {
     color: #fff;
-    font-size: 28px;
-    font-weight: 700;
-    margin-top: 12px;
-    font-style: italic;
+    font-size: 23px;
+    font-weight: 600;
+    margin-top: -30px;
+    /* font-style: italic; */
     pointer-events: none;
     scale: 0;
     opacity: 0;
@@ -277,6 +277,10 @@ button {
 }
 
 .sidebar nav {
+    padding: 0 10px;
+}
+
+.sidebar.open nav {
     padding: 0 15px;
 }
 
@@ -286,9 +290,9 @@ button {
     align-items: center;
     justify-content: flex-start;
     border-radius: 4px;
-    /* border-left: 4px solid transparent; */
+    border-left: 4px solid transparent;
     width: 100%;
-    height: 35px;
+    height: 40px;
     padding: 0px 16px;
     margin: 8px 0;
     color: #fff;
@@ -297,7 +301,7 @@ button {
 
 .sidebar nav .nav-link.active {
     background: rgba(255, 255, 255, 0.2);
-    /* border-left: 4px solid #fff; */
+    border-left: 4px solid #fff;
 }
 
 .sidebar nav .nav-link:hover {
@@ -387,7 +391,7 @@ button {
 /* Sub menu */
 
 .sidebar nav .sub-menu {
-    padding-left: 10px;
+    padding-left: 22px;
 }
 
 .sidebar.open nav .sub-menu {
@@ -397,13 +401,18 @@ button {
 .sidebar nav .sub-menu .sub-item {
     cursor: pointer;
     border-radius: 4px;
-    /* border-left: 4px solid transparent; */
+    border-left: 4px solid transparent;
     width: 100%;
-    height: 25px;
-    line-height: 25px;
+    height: 35px;
+    line-height: 35px;
     padding: 0 8px;
     margin: 5px 0;
     transition: 0.3s;
+}
+
+.sidebar nav .sub-menu .sub-item.active {
+    background: rgba(255, 255, 255, 0.2);
+    border-left: 4px solid #fff;
 }
 
 .sidebar nav .sub-menu .sub-item a {
@@ -635,9 +644,13 @@ button {
 .content .table-content table td {
     border-bottom: 1px solid #cecece;
     background: #fff;
-    padding: 5px;
+    padding: 5px 0;
     font-size: 13px;
     vertical-align: middle;
+}
+
+.content .table-content table td:hover {
+    cursor: pointer;
 }
 
 .content .table-content table .td-center {
@@ -812,7 +825,7 @@ table.table tbody tr.selected td {
 
 #createPDF .modal-body .input-group .input-item {
     width: 100%;
-    margin: 5px 0;
+    margin-top: 20px;
 }
 
 #createPDF .modal-body .input-group .input-item input {
@@ -856,11 +869,12 @@ table.table tbody tr.selected td {
     background-color: #dae8fc;
     border: 1px solid #dae8fc;
     color: #222;
+    font-size: 13px;
     border-radius: 4px;
     box-sizing: border-box;
     display: inline-block;
-    margin-left: 5px;
-    margin-top: 5px;
+    /* margin-left: 5px;
+    margin-top: 5px; */
     padding: 5px;
     padding-left: 20px;
     position: relative;
@@ -873,17 +887,20 @@ table.table tbody tr.selected td {
 
 .select2-results__option {
     padding-left: 15px;
+    font-size: 14px;
 }
 
 .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
     background-color: #dae8fc;
     color: #333;
+    font-size: 14px;
 }
 
 .select2-container--default .select2-results__option--selected {
     background-color: transparent;
     color: #003a8c;
     font-weight: 600;
+    font-size: 14px;
 }
 
 .select2-container--default .select2-results__option--selected::before {
@@ -898,6 +915,21 @@ table.table tbody tr.selected td {
     border-radius: 4px;
     border: none;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+    background-color: transparent;
+    border: none;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    color: #999;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 4px;
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 
 
@@ -1400,8 +1432,13 @@ footer a {
     justify-content: space-between;
 }
 
+#page--sub .top-content table .th-checkall {
+    padding: 15px 5px !important;
+}
+
 #page--sub .btn-trash {
     margin-bottom: 20px;
+    margin-left: 5px;
     display: flex;
     align-items: center;
 }
@@ -1410,24 +1447,27 @@ footer a {
     background: none;
     border: none;
     outline: none;
-    padding-right: 10px;
+    padding-right: 15px;
 }
 
 #page--sub .btn-trash button .icon-delete {
     font-size: 21px;
 }
 
-#page--sub .btn-trash a {
+#page--sub .btn-trash a,
+#page--sub .btn-trash button .icon-delete {
     width: 40px;
     height: 40px;
-    background: #ECECEC;
     border-radius: 50%;
+    background: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all .5s;
 }
 
-#page--sub .btn-trash a:hover {
+#page--sub .btn-trash a:hover,
+#page--sub .btn-trash button .icon-delete:hover {
     background: #e6ecf4;
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
 }
@@ -1493,7 +1533,7 @@ footer a {
 }
 
 
-/* The container */
+/* custom checkbox */
 
 #page--sub .input_label,
 #page--delete .input_label {
@@ -1509,11 +1549,9 @@ footer a {
     user-select: none;
 }
 
-
-/* Hide the browser's default checkbox */
-
 #page--sub .input_label input,
-#page--delete .input_label input {
+#page--delete .input_label input,
+#page--manage .input_label input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
@@ -1521,11 +1559,9 @@ footer a {
     width: 0;
 }
 
-
-/* Create a custom checkbox */
-
 #page--sub .checkmark,
-#page--delete .checkmark {
+#page--delete .checkmark,
+#page--manage .checkmark {
     position: absolute;
     top: -5px;
     left: 10px;
@@ -1536,45 +1572,35 @@ footer a {
     border: 1px solid #ccc;
 }
 
-
-/* On mouse-over, add a grey background color */
-
 #page--sub label:hover input~.checkmark,
-#page--delete label:hover input~.checkmark {
+#page--delete label:hover input~.checkmark,
+#page--manage label:hover input~.checkmark {
     background-color: #ccc;
 }
 
-
-/* When the checkbox is checked, add a blue background */
-
 #page--sub label input:checked~.checkmark,
-#page--delete label input:checked~.checkmark {
+#page--delete label input:checked~.checkmark,
+#page--manage label input:checked~.checkmark {
     background-color: #003a8c;
 }
 
-
-/* Create the checkmark/indicator (hidden when not checked) */
-
 #page--sub .checkmark:after,
-#page--delete .checkmark:after {
+#page--delete .checkmark:after,
+#page--manage .checkmark:after {
     content: "";
     position: absolute;
     display: none;
 }
 
-
-/* Show the checkmark when checked */
-
 #page--sub label input:checked~.checkmark:after,
-#page--delete label input:checked~.checkmark:after {
+#page--delete label input:checked~.checkmark:after,
+#page--manage label input:checked~.checkmark:after {
     display: block;
 }
 
-
-/* Style the checkmark/indicator */
-
 #page--sub label .checkmark:after,
-#page--delete label .checkmark:after {
+#page--delete label .checkmark:after,
+#page--manage label .checkmark:after {
     left: 5px;
     top: 0px;
     width: 5px;
@@ -1585,6 +1611,180 @@ footer a {
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
 }
+
+
+/* Custom check box */
+
+#page--sub .top-content .btn-down button {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    line-height: 40px;
+    transition: all .5s;
+}
+
+#page--sub .top-content .btn-down button i {
+    font-size: 21px;
+    color: #575A5E;
+}
+
+#page--sub .btn-down button:hover,
+#page--sub .btn-check .btn-reset i:hover {
+    background: #e6ecf4;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+}
+
+#page--sub .btn-check .btn-filter {
+    margin-right: 20px;
+    /* border: 1px solid #c8c8c8;
+    color: #495057; */
+    cursor: pointer;
+    position: relative;
+}
+
+#page--sub .btn-check .btn-filter:hover {
+    color: #fff;
+    border: 1px solid transparent;
+}
+
+#page--sub .btn-check .btn-filter i {
+    padding-right: 5px;
+    font-size: 18px;
+}
+
+#page--sub .btn-check .btn-filter .alarm-number {
+    position: absolute;
+    top: -10px;
+    right: -5px;
+    color: #003a8c;
+    background: #E6ECF4;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    font-weight: 600;
+}
+
+#page--sub .btn-check .btn-filter {
+    border: 1px solid #003a8c;
+    color: #003a8c;
+}
+
+#page--sub .btn-check .btn-reset {
+    margin-right: 15px;
+    background: none;
+    color: #495057;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+}
+
+#page--sub .btn-check .btn-reset i {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    border-radius: 50%;
+    transition: all .5s;
+}
+
+
+/* #page--sub .btn-check .btn-reset,
+#page--sub .btn-check .alarm-number {
+    display: none;
+} */
+
+
+/* Sidenav Filter */
+
+#page--sub .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0px;
+    background-color: #fff;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    overflow-x: hidden;
+    transition: all 0.2s ease-in-out;
+    padding-top: 60px;
+}
+
+#page--sub .sidenav a {
+    padding: 10px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+#page--sub .sidenav a:hover {
+    color: #575a5e;
+}
+
+#page--sub .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    left: -50px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#page--sub .sidenav .sidenav-title {
+    padding: 5px 15px;
+    font-weight: 600;
+    color: #575A5E;
+    font-size: 14px;
+}
+
+#page--sub .sidenav hr {
+    height: 1px;
+    background: #eee;
+    border-radius: 3px;
+    margin: 5px 15px;
+}
+
+#page--sub .sidenav .sidenav-content {
+    padding: 5px 15px;
+}
+
+#page--sub .sidenav .sidenav-content label {
+    color: #003a8c;
+    font-weight: 600;
+    font-size: 14px;
+    width: 100%;
+}
+
+#page--sub .sidenav .sidenav-content label .select2-container {
+    min-width: 100%;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+#page--sub .sidenav .sidenav-content label #reportrange span {
+    color: #222;
+    font-weight: 500;
+}
+
+.daterangepicker .ranges li.active {
+    background-color: #003a8c !important;
+}
+
+#page--sub .sidenav .btn-success {
+    padding: 15px;
+}
+
+
+/* Sidenav Filter */
 
 
 /*========= Page Delete =========*/
@@ -1794,6 +1994,7 @@ footer a {
     background: linear-gradient(90deg, #3a47d5 0%, #003a8c 100%);
     text-align: center;
     border-radius: 4px;
+    padding: 20px;
 }
 
 .info-soft .row {
@@ -1809,6 +2010,7 @@ footer a {
     font-weight: 600;
     font-size: 20px;
     color: #fff;
+    line-height: 30px;
 }
 
 .info-company {
@@ -1882,4 +2084,243 @@ footer a {
 #page--404 .container .error-message-3 {
     margin-top: 20px;
     font-style: italic;
+}
+
+
+/* ==== Page Manage ==== */
+
+#page--manage .top-content .btn-add {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-bottom: 15px;
+}
+
+#page--manage .main-content {
+    width: 100%;
+}
+
+#page--manage .main-content .footer-content {
+    display: flex;
+    height: 100%;
+}
+
+#page--manage .box-table table td:hover {
+    cursor: pointer;
+}
+
+#page--manage .box-table table td a {
+    font-size: 13px;
+}
+
+#page--manage .box-table {
+    width: 100%;
+}
+
+#page--manage .box-table.open {
+    width: 100%;
+}
+
+#page--manage .box-test {
+    width: 100%;
+}
+
+#page--manage .box-test.open {
+    width: 100%;
+}
+
+
+/* boxAdd */
+
+#page--manage .box-add {
+    width: 25%;
+    max-width: 30%;
+    height: 80%;
+    border-left: 1px solid #cecece;
+    border-right: 2px solid rgba(255, 255, 255, 0.09);
+    transition: 0.4s ease-in-out;
+    overflow-y: auto;
+}
+
+#page--manage .box-add.open {
+    display: none;
+}
+
+#page--manage .box-add h4,
+#page--manage .box-edit h4 {
+    font-size: 16px;
+    color: #003a8c;
+    font-weight: 600;
+    padding: 15px;
+    width: 100%;
+}
+
+#page--manage .box-add .box-input {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background: #fff;
+    height: 80%;
+}
+
+#page--manage .box-add .box-input label,
+#page--manage .box-edit .box-input label {
+    font-size: 13px;
+    color: #333;
+    font-weight: 400;
+}
+
+#page--manage .box-add .box-input label .required,
+#page--manage .box-edit .box-input label .required {
+    color: #DC4147;
+}
+
+#page--manage .box-add label .input-item,
+#page--manage .box-edit label .input-item {
+    width: 100%;
+    padding: 5px 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    background: #f5f5f5;
+}
+
+#page--manage .box-add label .input-item::placeholder,
+#page--manage .box-edit label .input-item::placeholder {
+    font-size: 13px;
+    color: #999;
+    opacity: 0.5;
+}
+
+#page--manage .box-add .box-input .hr,
+#page--manage .box-edit .box-input .hr {
+    width: 100%;
+    height: 1px;
+    background: #003a8c;
+    border-radius: 3px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+#page--manage .box-add p,
+#page--manage .box-edit p {
+    color: #003a8c;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+#page--manage .box-add .checkbox-list {
+    margin-top: 15px;
+    line-height: 10px;
+}
+
+#page--manage .input_label {
+    display: block;
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#page--manage .checkmark {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 20px;
+    width: 20px;
+    border-radius: 4px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+#page--manage .input_label p {
+    color: #000;
+    font-size: 13px;
+    padding: 5px;
+}
+
+#page--manage .btn-group {
+    float: right;
+    padding-top: 15px;
+    padding-right: 15px;
+}
+
+#page--manage .btn-group .btn--secondary {
+    margin-right: 10px;
+}
+
+#page--manage .content .table-content table td {
+    padding: 8px 0;
+}
+
+
+/* Box edit */
+
+#page--manage .box-edit {
+    width: 25%;
+    max-width: 30%;
+    height: 80%;
+    border-left: 1px solid #cecece;
+    border-right: 2px solid rgba(255, 255, 255, 0.09);
+    transition: 0.4s ease-in-out;
+    overflow-y: auto;
+    z-index: 2;
+}
+
+#page--manage .box-edit.open {
+    display: none;
+}
+
+#page--manage .box-edit .box-input {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background: #fff;
+    height: auto;
+}
+
+#page--manage .box-edit .checkbox-list {
+    line-height: 10px;
+    margin-top: 10px;
+}
+
+#page--manage .box-edit .checkbox-list-2 {
+    margin-top: 10px;
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    overflow-y: auto;
+    padding: 10px 0;
+    gap: 10px;
+    line-height: 18px;
+}
+
+#page--manage .box-edit .checkbox-list-2 .col-6 {
+    width: 50%;
+}
+
+@media screen and (max-width: 1023px) {
+    .sidebar,
+    .content,
+    .main-content,
+    footer,
+    .container,
+    .overlay {
+        display: none;
+    }
+    body::before {
+        content: "< Giao diện chưa hỗ trợ trên Tablet/Mobile >";
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        color: #003a8c;
+        font-size: 30px;
+        font-weight: 600;
+    }
 }
