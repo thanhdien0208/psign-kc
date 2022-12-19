@@ -240,7 +240,7 @@ button {
 }
 
 .sidebar.open .logo img {
-    width: 86px;
+    width: 70px;
     margin-left: 0px;
 }
 
@@ -337,6 +337,7 @@ button {
 .sidebar nav .nav-item span {
     font-size: 14px;
     margin-left: 8px;
+    font-weight: 400;
     pointer-events: none;
     opacity: 0;
 }
@@ -392,10 +393,12 @@ button {
 
 .sidebar nav .sub-menu {
     padding-left: 22px;
+    display: none;
 }
 
 .sidebar.open nav .sub-menu {
-    padding-left: 30px;
+    padding-left: 25px;
+    display: block;
 }
 
 .sidebar nav .sub-menu .sub-item {
@@ -426,7 +429,8 @@ button {
 .sidebar nav .sub-menu .sub-item span {
     pointer-events: none;
     opacity: 0;
-    font-size: 13px;
+    font-size: 14px;
+    font-weight: 400;
 }
 
 .sidebar.open nav .sub-menu .sub-item span {
@@ -638,6 +642,7 @@ button {
     position: sticky;
     top: 0%;
     font-size: 13px;
+    z-index: 1;
     vertical-align: middle;
 }
 
@@ -962,6 +967,7 @@ table.table tbody tr.selected td {
     justify-content: center;
     background: rgba(77, 77, 77, 0.7);
     transition: all 0.4s;
+    z-index: 2;
 }
 
 #info:target {
@@ -1152,6 +1158,7 @@ table.table tbody tr.selected td {
     justify-content: center;
     background: rgba(77, 77, 77, 0.7);
     transition: all 0.4s;
+    z-index: 2;
 }
 
 #eSign:target {
@@ -1329,6 +1336,7 @@ table.table tbody tr.selected td {
     display: none;
     align-items: center;
     justify-content: center;
+    z-index: 2;
 }
 
 #viewPDF.open {
@@ -2125,14 +2133,6 @@ footer a {
 }
 
 #page--manage .box-table.open {
-    width: 100%;
-}
-
-#page--manage .box-test {
-    width: 100%;
-}
-
-#page--manage .box-test.open {
     width: 100%;
 }
 
