@@ -650,7 +650,7 @@ button {
     border-bottom: 1px solid #cecece;
     background: #fff;
     color: #3A3A3A;
-    padding: 5px 0;
+    padding: 8px 0;
     font-size: 13px;
     vertical-align: middle;
 }
@@ -1535,7 +1535,7 @@ footer a {
 }
 
 .table-content td .box {
-    padding: 3px 8px;
+    padding: 5px 8px;
     border-radius: 20px;
     display: inline-block;
 }
