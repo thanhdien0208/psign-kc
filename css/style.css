@@ -1482,24 +1482,23 @@ footer a {
     padding-right: 15px;
 }
 
-#page--sub .btn-trash button .icon-delete {
-    font-size: 21px;
+#page--sub .btn-trash button a svg {
+    width: 28px;
+    height: 28px;
 }
 
-#page--sub .btn-trash a,
-#page--sub .btn-trash button .icon-delete {
+#page--sub .btn-trash a {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background: transparent;
+    background: none;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all .5s;
 }
 
-#page--sub .btn-trash a:hover,
-#page--sub .btn-trash button .icon-delete:hover {
+#page--sub .btn-trash a:hover {
     background: #e6ecf4;
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
 }
