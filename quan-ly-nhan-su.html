@@ -118,7 +118,7 @@
                     <div class="top-content">
 
                         <div class="btn-add">
-                            <button class="btn--primary">
+                            <button class="btn--primary" onclick="btnAdd() ">
                                 <span>+</span>
                                 Thêm nhân vên
                             </button>
@@ -134,10 +134,32 @@
                                 <th style="width: 15%;text-align: start;">Số điện thoại</th>
                                 <th style="width: 30%;text-align: start;border-radius: 0px 4px 4px 0px;">Email</th>
                             </tr>
-                            <tr>
+                            <tr onclick="btnEdit()" class="btn-edit">
                                 <td class="td-center">1</td>
                                 <td>
-                                    <a class="btn-edit">Nguyễn Thanh Điền</a>
+                                    <a>Nguyễn Thanh Điền</a>
+                                </td>
+                                <td>Admin</td>
+                                <td>0933934xxx</td>
+                                <td>
+                                    diennt@pvs.com.vn
+                                </td>
+                            </tr>
+                            <tr onclick="btnEdit()" class="btn-edit">
+                                <td class="td-center">2</td>
+                                <td>
+                                    <a>Nguyễn Thanh Điền</a>
+                                </td>
+                                <td>Admin</td>
+                                <td>0933934xxx</td>
+                                <td>
+                                    diennt@pvs.com.vn
+                                </td>
+                            </tr>
+                            <tr onclick="btnEdit()" class="btn-edit">
+                                <td class="td-center">3</td>
+                                <td>
+                                    <a>Nguyễn Thanh Điền</a>
                                 </td>
                                 <td>Admin</td>
                                 <td>0933934xxx</td>
@@ -151,8 +173,9 @@
                     </div>
                 </section>
             </div>
-            <div id="style-scroll-table" class="box-add open">
+            <div id="boxAdd" class="box-add open">
                 <h4>Thêm nhân viên</h4>
+                <span class="btn-close" onclick="btnClose()">&times;</span>
                 <hr>
                 <div class="box-input">
                     <label>Họ và tên
@@ -195,8 +218,10 @@
                     <button class="btn--primary">Lưu</button>
                 </div>
             </div>
-            <div id="style-scroll-content" class="box-edit open">
+            <div id="boxEdit" class="box-edit open">
                 <h4>Nhân viên ID 11</h4>
+                <span class="btn-close" onclick="btnClose()">&times;</span>
+
                 <hr>
                 <div class="box-input">
                     <label>Họ và tên
